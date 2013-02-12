@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Purok.create({"PUROK 1 (ASPILI RESIDENCE)", to_lat: "14.453857", to_lng: "120.9825136", from_lat: "14.4507792", from_lng: "120.9795927"})
+Purok.create({"PUROK 2 (AZARCON RESIDENCE)", to_lat: "14.4457533", to_lng: "120.9862513", from_lat: "14.4481273", from_lng: "120.9848244"})
+Purok.create({"PUROK 3 (ARDONA RESIDENCE)", to_lat: "14.4358309", to_lng: "120.9909009", from_lat: "14.4445429", from_lng: "120.9938674"})
+Purok.create({"PUROK 4 (BENZ COMPOUND)", to_lat: "14.4484055", to_lng: "120.9938489", from_lat: "14.4445429", from_lng: "120.9938674"})
