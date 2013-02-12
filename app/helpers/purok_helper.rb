@@ -1,0 +1,2 @@
+module PurokHelper
+end

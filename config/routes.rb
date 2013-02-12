@@ -1,4 +1,12 @@
 Qrp::Application.routes.draw do
+  get "purok/index"
+
+  get "purok/show"
+
+  get "home/index"
+  
+  root :to => "home#index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
