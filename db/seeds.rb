@@ -13,4 +13,5 @@ Purok.create({name: "PUROK 4 (BENZ COMPOUND)", to_lat: "14.4484055", to_lng: "12
 
 a = Marker.create({lat: "14.4908834", lng: "121.0551348", title: "TCU", html: "Taguig City University"})
 b = Marker.create({lat: "14.486479", lng: "121.0435477", title: "SM Bicutan", html: "SM Bicutan"})
-Route.create({from_marker_id: a.id, to_marker_id: b.id, title: "THIS IS KADIWA METRO MANILA SOUTH EDITION VENUE"})
+route = Route.create({from_marker_id: a.id, to_marker_id: b.id, title: "THIS IS KADIWA METRO MANILA SOUTH EDITION VENUE"})
+route.markers.create({lat: "14.4869361", lng: "121.0432473", title: "SM Bicutan", html: '<div>SM Bicutan</div> <img src="http://www.smprime.com/smprime/uploads/image/mallList/Bicutan.jpg" width="75%" height="75%">'})

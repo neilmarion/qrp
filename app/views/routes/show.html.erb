@@ -9,14 +9,40 @@
   var map;
   var oldDirections = [];
   var currentDirections = null;
-
+  markers = []
+  
   function initialize() {
+    
+  
     var myOptions = {
       zoom: 16,
       center: new google.maps.LatLng(<%= s %>),
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    
+    <% @route.markers.each do |marker| %>
+      latlng = new google.maps.LatLng(<%= marker.lat %>,<%= marker.lng %>);
+      marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: '<%= marker.title %>',
+        labelContent: '<%= marker.title %>',
+        html: '<%= marker.html.html_safe %>'
+      });
+      markers.push(marker)   
+    <% end %>
+    
+    for (var i = 0; i < markers.length; i++) {
+      var marker = markers[i];
+      var infowindow = new google.maps.InfoWindow();
+      
+      google.maps.event.addListener(marker, 'click', function () {
+        infowindow.setContent(this.html);
+        infowindow.open(map, this);
+      });
+    }
+    
 
     directionsDisplay = new google.maps.DirectionsRenderer({
         'map': map,
