@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20130214001139) do
 
   create_table "routes", :force => true do |t|
     t.string   "title"
+    t.string   "html"
     t.integer  "from_marker_id"
     t.integer  "to_marker_id"
     t.datetime "created_at",     :null => false
