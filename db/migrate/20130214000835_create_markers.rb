@@ -5,7 +5,7 @@ class CreateMarkers < ActiveRecord::Migration
       t.string :lng
       t.string :title
       t.string :html
-      t.integer :map_id
+      t.integer :route_id
 
       t.timestamps
     end

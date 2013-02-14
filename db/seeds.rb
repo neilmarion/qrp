@@ -10,3 +10,7 @@ Purok.create({name: "PUROK 1 (ASPILI RESIDENCE)", to_lat: "14.453857", to_lng: "
 Purok.create({name: "PUROK 2 (AZARCON RESIDENCE)", to_lat: "14.4457533", to_lng: "120.9862513", from_lat: "14.4481273", from_lng: "120.9848244"})
 Purok.create({name: "PUROK 3 (ARDONA RESIDENCE)", to_lat: "14.4358309", to_lng: "120.9909009", from_lat: "14.4445429", from_lng: "120.9938674"})
 Purok.create({name: "PUROK 4 (BENZ COMPOUND)", to_lat: "14.4484055", to_lng: "120.9938489", from_lat: "14.4445429", from_lng: "120.9938674"})
+
+a = Marker.create({lat: "14.4908834", lng: "121.0551348", title: "TCU", html: "Taguig City University"})
+b = Marker.create({lat: "14.486479", lng: "121.0435477", title: "SM Bicutan", html: "SM Bicutan"})
+Route.create({from_marker_id: a.id, to_marker_id: b.id, title: "THIS IS KADIWA METRO MANILA SOUTH EDITION VENUE"})

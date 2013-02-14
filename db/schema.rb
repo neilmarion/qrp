@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20130214001139) do
     t.string   "lng"
     t.string   "title"
     t.string   "html"
-    t.integer  "map_id"
+    t.integer  "route_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
